@@ -1,0 +1,43 @@
+// Método para CREAR un usuario en la BD
+###
+POST http://localhost:1000/api/users HTTP/1.1
+Content-Type: application/json
+
+{
+  "name": "Carlos Lopez",
+  "identification": 71381589,
+  "password": "abc123"
+}
+
+// Método para el login o autenticación de usuario
+###
+POST http://localhost:1000/api/login HTTP/1.1
+Content-Type: application/json
+
+{
+    "name": "Carlos Lopez",
+    "password": "abc123"
+}
+
+// Consultar todos los usuarios
+###
+GET http://localhost:1000/api/users HTTP/1.1
+
+// consultar un usuario
+###
+GET http://localhost:1000/api/users/651fb63e1ad61a5289c40827 HTTP/1.1
+
+// Eliminar un usuario
+###
+DELETE http://localhost:1000/api/users/651fb63e1ad61a5289c40827 HTTP/1.1
+
+// Actualizar un usuario 
+###
+PUT http://localhost:1000/api/users/651fb63e1ad61a5289c40827 HTTP/1.1
+Content-Type: application/json
+
+{
+  "name": "Carlos Giraldo",
+  "identification": 71381589,
+  "password": "abc123"
+}
